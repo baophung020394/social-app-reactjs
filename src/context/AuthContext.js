@@ -13,7 +13,7 @@ const INITIAL_STATE = {
     coverPicture: '',
     isAdmin: false,
     followers: [],
-    followings: [],
+    followings: [1, 2],
   },
   isFetching: false,
   error: false,
