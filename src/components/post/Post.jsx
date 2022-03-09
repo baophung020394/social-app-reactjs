@@ -2,9 +2,11 @@ import React, { useState, useEffect, useContext } from 'react';
 import { MoreVert } from '@material-ui/icons';
 import axios from 'axios';
 import { format } from 'timeago.js';
+
 import { Link } from 'react-router-dom';
 import './post.css';
 import { AuthContext } from '../../context/AuthContext';
+import ReactTimeAgo from 'react-time-ago';
 
 export default function Post({ post }) {
   const [like, setLike] = useState(post.likes.length);
@@ -53,7 +55,8 @@ export default function Post({ post }) {
             </Link>
             <span className='postUsername'>{user.username}</span>
             <span className='postDate'>
-              {format(post.createdAt)} {post.date}
+              {/* <ReactTimeAgo date={post.createdAt} locale="en-US"  timeStyle="round"/> */}
+              {format(post.createdAt)}
             </span>
           </div>
           <div className='postTopRight'>
